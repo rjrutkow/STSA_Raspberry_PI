@@ -9,9 +9,10 @@ import random
 broker = ""
 topic = "iot-2/evt/status/fmt/json"
 username = "use-token-auth"
-password = "+S_TiZF6HsvNmNL@0f" #auth-token
-organization = "1ewlht" #org_id
-deviceType = "myo"
+password = "+S_TiZF6HsvNmNL@0f" #CHANGE THIS TO: Your auth-token
+organization = "1ewlht" #CHANGE THIS TO: Your org_id
+deviceType = "Raspberry_PI" #CHANGE THIS TO: Your device type
+deviceID = "Raspberry_PI" #CHANGE THIS TO: Your deviceID
 
 topic = "iot-2/evt/status/fmt/json"
 randNum=0
@@ -21,7 +22,7 @@ randNum=0
 
 #Creating the client connection
 #Set clientID and broker
-clientID = "d:" + organization + ":" + deviceType + ":" + "Mymyo"
+clientID = "d:" + organization + ":" + deviceType + ":" + deviceID
 broker = organization + ".messaging.internetofthings.ibmcloud.com"
 mqttc = mqtt.Client(clientID)
 
